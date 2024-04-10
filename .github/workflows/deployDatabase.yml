@@ -25,7 +25,7 @@ jobs:
    steps: 
    - uses: actions/checkout@v3
    - name: show database
-     run: mysql -h hostname --port 3306 -uusername --password -e "SHOW DATABASE";
+     run: mysql -h ${{secrets.DB_HOSTNAME}} --port ${{secrets.DB_PORT}}  -u${{secrets.DB_USER}} --p${{secrets.DB_PASSWORD}}-e "SHOW DATABASE";
      
     
    
